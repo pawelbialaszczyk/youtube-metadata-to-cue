@@ -1,0 +1,19 @@
+{
+  "name": "youtube-metadata-to-cue",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "Convert youtube-dl video description metadata to a CUE sheet",
+  "keywords": [
+    "youtube",
+    "youtube-dl",
+    "cue",
+    "cue-sheet"
+  ],
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.19",
+    "jest": "^26.6.3"
+  }
+}
