@@ -2,7 +2,7 @@
   "name": "youtube-metadata-to-cue",
   "version": "0.0.1",
   "license": "MIT",
-  "description": "Convert youtube-dl video description metadata to a CUE sheet",
+  "description": "Convert youtube-dl video description metadata to a CUE sheet.",
   "keywords": [
     "youtube",
     "youtube-dl",
