@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
-const convert = require('./convert');
+const convert = require('../src/convert');
 
 describe('convert', () => {
-  const testDataDir = path.join(__dirname, 'test-data');
+  const testDataDir = path.join(__dirname, 'data');
 
   const testCases = fs.readdirSync(testDataDir)
     .map(path.parse)
