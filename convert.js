@@ -24,7 +24,7 @@ const toIndex = totalSeconds => {
   const seconds = totalSeconds % 60;
 
   return { minutes, seconds, frames: 0 };
-}
+};
 
 module.exports = json => {
   const cue = {
