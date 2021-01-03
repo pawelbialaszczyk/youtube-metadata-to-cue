@@ -9,4 +9,7 @@ jobs:
       with:
         node-version: '15.x'
     - run: npm ci
-    - run: npm test
+    - run: npm test -- --coverage
+    - uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
