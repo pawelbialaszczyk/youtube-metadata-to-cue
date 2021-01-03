@@ -8,12 +8,17 @@ Convert youtube-dl video description metadata to a CUE sheet.
 
 First, download video description metadata as JSON:
 ```
-youtube-dl.exe --write-info-json --skip-download <URL>
+youtube-dl --write-info-json --skip-download <URL>
 ```
 
 Next, pass in the output JSON file path as input:
 ```
 node . <PATH>
+```
+
+Alternatively, you can pipe in the JSON directly to the script in one go:
+```
+youtube-dl --dump-json <URL> | ./index.js
 ```
 
 This will generate a matching CUE sheet based on YouTube's chapter metadata.
