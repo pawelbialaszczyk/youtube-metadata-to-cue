@@ -1,3 +1,5 @@
+const assert = require('node:assert/strict');
+const { describe, it } = require('node:test');
 const fs = require('fs');
 const path = require('path');
 const convert = require('../src/convert');
@@ -13,10 +15,12 @@ const readTestFile = fileName =>
 describe('convert', () => {
   const testCases = Array.from(readTestNames());
 
-  it.each(testCases)('should map JSON to CUE for %s', name => {
-    const json = JSON.parse(readTestFile(`${name}.json`));
-    const cue = readTestFile(`${name}.cue`);
+  for (const name of testCases) {
+    it(`should map JSON to CUE for ${name}`, () => {
+      const json = JSON.parse(readTestFile(`${name}.json`));
+      const cue = readTestFile(`${name}.cue`);
 
-    expect(convert(json)).toBe(cue);
-  });
+      assert.equal(convert(json), cue);
+    });
+  }
 });

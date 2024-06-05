@@ -10,10 +10,7 @@
     "cue-sheet"
   ],
   "scripts": {
-    "test": "jest"
-  },
-  "devDependencies": {
-    "@types/jest": "^28.1.6",
-    "jest": "^28.1.3"
+    "test": "node --test",
+    "test:coverage": "node --test --experimental-test-coverage"
   }
 }
