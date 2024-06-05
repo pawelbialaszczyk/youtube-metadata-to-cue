@@ -9,6 +9,7 @@
     "cue",
     "cue-sheet"
   ],
+  "type": "module",
   "scripts": {
     "test": "node --test",
     "test:coverage": "node --test --experimental-test-coverage"

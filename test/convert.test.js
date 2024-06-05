@@ -1,10 +1,11 @@
-const assert = require('node:assert/strict');
-const { describe, it } = require('node:test');
-const fs = require('fs');
-const path = require('path');
-const convert = require('../src/convert');
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { describe, it } from 'node:test';
+import url from 'node:url';
+import convert from '../src/convert.js';
 
-const testDataDir = path.join(__dirname, 'data');
+const testDataDir = path.join(path.dirname(url.fileURLToPath(import.meta.url)), 'data');
 
 const readTestNames = () =>
   new Set(fs.readdirSync(testDataDir).map(file => path.parse(file).name));

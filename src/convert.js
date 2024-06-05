@@ -26,7 +26,7 @@ const toIndex = totalSeconds => {
   return { minutes, seconds, frames: 0 };
 };
 
-module.exports = json => {
+export default json => {
   const cue = {
     performer: json.uploader,
     title: json.fulltitle,
