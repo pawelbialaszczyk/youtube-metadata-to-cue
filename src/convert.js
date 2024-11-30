@@ -19,13 +19,6 @@ const emit = cue => {
   return result.join('\n');
 };
 
-const toIndex = totalSeconds => {
-  const minutes = Math.floor(totalSeconds / 60);
-  const seconds = totalSeconds % 60;
-
-  return { minutes, seconds, frames: 0 };
-};
-
 export default json => {
   const cue = {
     performer: json.uploader,
@@ -34,7 +27,11 @@ export default json => {
     format: 'MP3',
     tracks: json.chapters.map(chapter => ({
       title: chapter.title,
-      index: toIndex(chapter.start_time),
+      index: {
+        minutes: Math.floor(chapter.start_time / 60),
+        seconds: chapter.start_time % 60,
+        frames: 0,
+      },
     })),
   };
 
